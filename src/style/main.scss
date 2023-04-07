@@ -1,0 +1,259 @@
+@import '../../node_modules/jquery-ui-bundle/jquery-ui.css';
+@import "../../node_modules/toastify-js/src/toastify.css";
+// @import "../../node_modules/jquery-ui/themes/base/core.css";
+// @import "../../node_modules/jquery-ui/themes/base/selectable.css";
+// @import "../../node_modules/jquery-ui/themes/base/sortable.css";
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+
+  0%,
+  100% {
+    transform: rotate(0)
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg)
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg)
+  }
+}
+
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm {
+    animation: none
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+  }
+}
+
+:root[lang="en"] [lang="fr"],
+:root[lang="fr"] [lang="en"] {
+  display: none;
+}
+
+:root[lang="en"] [lang="ar"],
+:root[lang="ar"] [lang="en"] {
+  display: none;
+}
+
+:root[lang="fr"] [lang="ar"],
+:root[lang="ar"] [lang="fr"] {
+  display: none;
+}
+
+td[lang="ar"] {
+  text-align: right;
+  direction: rtl;
+}
+
+// #particles-js canvas {
+//   width: 100%;
+//   height: 100%;
+//   /* background: #5f5f5f59; */
+//   position: fixed;
+//   z-index: -10;
+//   top: 0;
+//   left: 0;
+// }
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fbffda;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .to-dark-img {
+    filter: invert(1);
+  }
+  blockquote {
+    filter: invert(1);
+  }
+  small, p, b, span {
+    color: beige;
+  }
+}
+
+.ui-sortable {
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+.ui-sortable-handle {
+  background: rgba(215, 171, 38, 0.19);
+  border-radius: 0.4rem;
+  cursor: grab;
+}
+
+.ui-state-highlight {
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #dbdbdb;
+  opacity: 0.25;
+}
+
+// I really don't know a bit of CSS but these two rule work
+// put svg inside input
+.input-icons svg {
+  position: absolute;
+}
+
+// put svg besides input
+.dynamic-field {
+  display: flex;
+}
+
+// put svg besides input
+.dynamic-field svg {
+  position: absolute;
+  padding: 0;
+}
+
+.input-icons {
+  /* background-color: rgb(243, 243, 224); */
+  padding: 3rem;
+  position: relative;
+  // background-color: #efefef38;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+}
+
+h1 {
+  background: -webkit-linear-gradient(45deg, #09009f, #00ff95 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: invert(1);
+}
+
+.input-field {
+  text-indent: 45px;
+  line-height: 125%;
+}
+
+.input-field:disabled:hover {
+  cursor: auto;
+}
+
+input[name="instagram"] {
+  background-color: #C13584;
+}
+
+input[name="youtube"] {
+  background-color: #FF0000;
+}
+
+input[name="facebook"] {
+  background-color: #4267B2;
+}
+
+input[name="twitter"] {
+  background-color: #1DA1F2;
+}
+
+input[name="snapchat"] {
+  background-color: #FEFC00;
+  color: black;
+}
+
+input[name="mastodon"] {
+  background-color: #595aff;
+}
+
+
+form input[type=text]::placeholder {
+  mix-blend-mode: exclusion;
+}
+
+#phone-id,
+#mail-id {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+th {
+  width: max-content;
+}
+
+th img {
+  margin-top: 10%;
+}
+
+#qrcode img {
+  display: block;
+  margin: auto;
+}
+
+.share-btn>a {
+  padding: 5px;
+  font-size: 12px;
+  font-family: Verdana, Arial;
+}
+
+.share-btn>a:hover {
+  cursor: pointer;
+}
+
+#art {
+  float: right;
+  position: absolute;
+  right: 50%;
+  top: 10%;
+}
+
+select {
+  width: auto !important;
+  float: right;
+  margin-right: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.progress-container {
+  height: 0.8rem;
+  /* width: 32rem; */
+  background: #000;
+}
+
+.progress-container .progress {
+  height: 100%;
+  width: 0;
+  background: #47ff8d;
+  transition: width 0.4s ease;
+}
+
+#required {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.card-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+footer {
+  color: var(--text-main);
+}
+
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+  th {
+    width: 3rem !important;
+  }
+}

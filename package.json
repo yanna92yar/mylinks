@@ -1,0 +1,62 @@
+{
+  "name": "mylinks.space",
+  "version": "1.0.0",
+  "description": " A serverless social cards sharing web app",
+  "type": "module",
+  "source": [
+    "src/app.js",
+    "src/index.html",
+    "src/card.html"
+  ],
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "purge": "rimraf .parcel-cache && node purge.js",
+    "build": "npm run purge && parcel build --dist-dir docs",
+    "serve": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bacloud23/mylinks.git"
+  },
+  "author": "B.A. bacloud (23)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bacloud23/mylinks/issues"
+  },
+  "homepage": "https://github.com/bacloud23/mylinks#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@parcel/service-worker": "^2.8.3",
+    "@rwap/jquery-ui-touch-punch": "^1.0.11",
+    "canvas-confetti": "^1.6.0",
+    "jquery": "^3.6.3",
+    "jquery-ui": "^1.13.2",
+    "jquery-ui-bundle": "^1.12.1-migrate",
+    "print-js": "^1.6.0",
+    "qrcode": "^1.5.1",
+    "sharer.js": "^0.5.1",
+    "social-links": "^1.10.0",
+    "stonejs": "^2.7.0",
+    "stretchy": "^2.0.1",
+    "toastify-js": "^1.12.0",
+    "trystero": "^0.11.8"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@parcel/packager-raw-url": "^2.8.3",
+    "@parcel/reporter-bundle-analyzer": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "parcel": "^2.8.3",
+    "posthtml-include": "^1.7.4",
+    "rimraf": "^4.1.2",
+    "serve": "^14.2.0"
+  }
+}

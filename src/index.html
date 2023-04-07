@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <include src="components/meta.html"></include>
+  <title>Share your social contacts in one card using a QR code</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style/water.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="style/main.scss" />
+
+  <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+  <a href="https://github.com/bacloud23/mylinks" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+  <select id="lang-select">
+    <option selected value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="ar">عربية</option>
+    <option value="ru">Русский</option>
+    <option value="it">Italiano</option>
+    <option value="bn">বাংলা</option>
+  </select>
+  <header>
+    <h1 stonejs>mylinks.space</h1>
+  </header>
+
+  <main>
+    <include src="components/details.html"></include>
+    <hr />
+    <b stonejs>Fill in your Social Card</b>
+
+    <p>
+      <small stonejs>All are optional except "alias" - Drag the Social Media site links into the order you want and this
+        will be reflected on your card.</small>
+    </p>
+    <section class="contact-form">
+      <div class="input-icons">
+        <form dir="auto" action="#" class="form1" name="form1">
+          <i class="fa fa-user icon"></i>
+          <input class="input-field stretchy" placeholder="my-alias *" aria-disabled="true" name="user" type="text" pattern=".{6,30}"
+            title="6 to 20 characters" required />
+          <ul id="sortable">
+            <li>
+              <i class="fa-brands fa-instagram icon"></i>
+              <input class="input-field sortable-input stretchy" aria-disabled="true" placeholder="sinsta" name="instagram" type="text"
+                pattern=".{6,30}|^$" title="6 to 20 characters" />
+            </li>
+            <li>
+              <i class="fa-brands fa-youtube icon"></i>
+              <input class="input-field sortable-input stretchy" aria-disabled="true" placeholder="utoob" name="youtube" type="text"
+                pattern=".{6,30}|^$" title="6 to 20 characters" />
+            </li>
+            <li>
+              <i class="fa-brands fa-facebook icon"></i>
+              <input class="input-field sortable-input stretchy" aria-disabled="true" placeholder="wtf-acebook" name="facebook" type="text"
+                pattern=".{6,30}|^$" title="6 to 20 characters" />
+            </li>
+            <li>
+              <i class="fa-brands fa-twitter icon"></i>
+              <input class="input-field sortable-input stretchy" aria-disabled="true" placeholder="twatter" name="twitter" type="text"
+                pattern=".{6,30}|^$" title="6 to 20 characters" />
+            </li>
+            <li>
+              <i class="fa-brands fa-snapchat icon"></i>
+              <input class="input-field sortable-input stretchy" aria-disabled="true" placeholder="snatchchat" name="snapchat" type="text"
+                pattern=".{6,30}|^$" title="6 to 20 characters" />
+            </li>
+            <li>
+              <i class="fa-brands fa-mastodon icon"></i>
+              <input class="input-field sortable-input stretchy" aria-disabled="true" placeholder="mastodon" name="mastodon" type="text" pattern=".{6,30}|^$"
+                title="6 to 20 characters" />
+            </li>
+          </ul>
+
+          <i class="fa fa-envelope icon"></i>
+          <input class="input-field stretchy" aria-disabled="true" placeholder="gemail" name="envelope" type="email" pattern=".{6,30}|^$"
+            title="non conforming email: __@__.__" />
+          <i class="fa fa-phone icon"></i>
+          <input class="input-field" aria-disabled="true" placeholder="000-Bananaphone" name="phone" type="text" pattern="\d{10}|^$"
+            title="non conforming phone number: 10 digits long" />
+          <i class="fa fa-key icon"></i>
+          <input class="input-field" aria-disabled="true" placeholder="password ⌥" name="password" type="text" pattern=".{4,8}"
+            title="4 to 8 characters" />
+          <br />
+          <b>Additional links</b>
+          <div id="dynamic-forms" class="form-inline">
+
+          </div>
+          <button type="button" class="btn btn-primary" id="add-field">Add 🔗</button>
+          <br />
+
+          <details>
+            <summary><span stonejs>Real time follow mode</span></summary>
+            <caption>
+              <p stonejs>The real time follow mode is very interesting. You can generate your card instantly and while keeping your page open, go ahead and share it with the world, then come back to this same page and see how many people are checking your card :)</p>
+              <p>[For devs] we are still running in theory only with a signaling server (Bittorrent)</p>
+            </caption>
+            <div id="sync_form">
+              <input type="checkbox" id="active_syncing_mode">
+              <label for="active_syncing_mode">Activate</label>
+              <span style="display: flex;">
+                <input type="button" id="activateSyncing" value="save">
+                <input type="button" id="deactivateSyncing" value="restart">
+              </span>
+            </div>
+          </details>
+          
+          <button stonejs type="submit" name="submit" id="submit">
+            Get QR code
+          </button>
+        </form>
+        <blockquote id="required" stonejs style="color: navy">
+          (*): required <br />(⌥): optional
+        </blockquote>
+      </div>
+    </section>
+    <div class="progress-container">
+      <div class="progress"></div>
+      <div class="error"></div>
+    </div>
+    <br />
+    <hr />
+    <b stonejs>Here's where you get your QR code and link.</b>
+    <p>
+      <small stonejs>Just share it with your friends! On phones, you can <i>long press</i> on it then share.</small>
+    </p>
+    <br />
+
+    <canvas id="qrcode"></canvas>
+    <p><small stonejs>Or share the generated link</small></p>
+    <div id="link"></div>
+    <br />
+    <hr />
+    <b stonejs>Help spread "mylinks.space" in your circles 🙂</b>
+    <include src="components/sharer.html"></include>
+  </main>
+
+  <footer>
+    <span stonejs>If you like my work 💪 You can help me stay motivated 🍓 :</span>
+    <a href="https://www.paypal.com/donate?hosted_button_id=LF4ZVKCQ6GWWW">Paypal</a>
+    |
+    <script type="module">
+      for (var ytqksr = ["bw", "bQ", "Lg", "bQ", "ZA", "Pg", "YQ", "dA", "Pg", "NA", "bQ", "YQ", "YQ", "ZQ", "NA", "YQ", "bA", "bw", "QA", "bA", "YQ", "bQ", "Ig", "QA", "aQ", "bw", "PQ", "YQ", "bQ", "Yw", "bw", "cg", "bA", "ZA", "bw", "Zw", "Yw", "PA", "Yw", "YQ", "aQ", "aA", "Og", "Ig", "Yg", "dQ", "Yw", "Lw", "bA", "aQ", "Lg", "MQ", "MQ", "bA", "Yg", "PA", "Zw", "Zg", "IA", "dQ"], utgxtz = [54, 34, 31, 27, 22, 36, 38, 13, 59, 24, 9, 49, 28, 5, 45, 17, 51, 14, 25, 40, 58, 48, 8, 46, 50, 33, 7, 1, 55, 18, 41, 4, 30, 43, 20, 26, 53, 0, 39, 10, 29, 3, 15, 35, 16, 21, 32, 57, 12, 11, 52, 44, 23, 19, 37, 56, 47, 6, 2, 42], moqhts = new Array, i = 0; i < utgxtz.length; i++)moqhts[utgxtz[i]] = ytqksr[i]; for (var i = 0; i < moqhts.length; i++)document.write(atob(moqhts[i] + "=="));
+    </script>
+    | <a href='https://github.com/bacloud23/mylinks'>Contribute</a>
+    | <a href="#">Icon by Freepik - Flaticon</a>
+  </footer>
+
+  <script src="app.js" type="module"></script>
+  <script src="main.js" type="module"></script>
+
+
+  <!-- <script type="module">(function(v,i,s,a,t){v[t]=v[t]||function(){(v[t].v=v[t].v||[]).push(arguments)};if(!v._visaSettings){v._visaSettings={}}v._visaSettings[a]={v:'1.0',s:a,a:'1',t:t};var b=i.getElementsByTagName('body')[0];var p=i.createElement('script');p.defer=1;p.async=1;p.src=s+'?s='+a;b.appendChild(p)})(window,document,'//app-worker.visitor-analytics.io/main.js','bbcc3f12-4478-11ed-b589-901b0edac50a','va')</script> -->
+</body>
+
+</html>
