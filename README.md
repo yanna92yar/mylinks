@@ -40,9 +40,3 @@ The rendered social card is like this:
 - Better design
 - Finishing with some bugs (decrypt a card twice)
 - Shrink the bundle size especially with the imported `@fortawesome/fontawesome-free/js/all`
-
-So any help is appreciated.
-
-# Licence
-b@cloud14(at)gmail(dot)com - 2023  
-Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) 
