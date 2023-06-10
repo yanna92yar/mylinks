@@ -6,7 +6,8 @@
   "source": [
     "src/app.js",
     "src/index.html",
-    "src/card.html"
+    "src/card.html",
+    "src/landing.html"
   ],
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
@@ -18,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bacloud23/mylinks.git"
+    "url": "git+https://github.com/baclod23/mylinks.git"
   },
-  "author": "B.A. bacloud (23)",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bacloud23/mylinks/issues"
+    "url": "https://github.com/baclod23/mylinks/issues"
   },
-  "homepage": "https://github.com/bacloud23/mylinks#readme",
+  "homepage": "https://github.com/baclod23/mylinks#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
